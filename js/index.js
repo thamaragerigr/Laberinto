@@ -1,7 +1,7 @@
 const { Engine, Render, Runner, World, Bodies, Body, Events } = Matter;
 
-const cellsHorizontal = 6;
-const cellsVertical = 4;
+const cellsHorizontal = 16;
+const cellsVertical = 12;
 const width = window.innerWidth;
 const height = window.innerHeight;
 
@@ -132,7 +132,7 @@ horizontals.forEach((row, rowIndex) => {
         label: 'wall',
         isStatic: true,
         render: {
-            fillStyle: 'red'
+            fillStyle: 'white'
          }
       }
     );
@@ -155,7 +155,7 @@ verticals.forEach((row, rowIndex) => {
         label: 'wall',
         isStatic: true,
         render: {
-           fillStyle: 'red'
+           fillStyle: 'white'
         }
       }
     );
@@ -174,7 +174,7 @@ const goal = Bodies.rectangle(
     label: 'goal',
     isStatic: true,
     render: {
-        fillStyle: 'green'
+        fillStyle: 'white'
      }
   }
 );
@@ -186,7 +186,7 @@ const ballRadius = Math.min(unitLengthX, unitLengthY) / 4;
 const ball = Bodies.circle(unitLengthX / 2, unitLengthY / 2, ballRadius, {
   label: 'ball',
   render: {
-    fillStyle: 'blue'
+    fillStyle: 'white'
  }
 });
 World.add(world, ball);
